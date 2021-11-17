@@ -1,5 +1,6 @@
 package com.example.mypage;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.SharedPreferences;
@@ -18,6 +19,11 @@ public class MypageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mypage);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
+
 //        txtResult = (TextView) findViewById(R.id.txtResult);
 
         Button camping = (Button) findViewById(R.id.camping);
@@ -86,9 +92,10 @@ public class MypageActivity extends AppCompatActivity {
                 editor.putBoolean("시계",true);
                 editor.putBoolean("패션",true);
                 editor.commit();
-                //..
             }
         });
+
+
 
     }
 //        //버튼
